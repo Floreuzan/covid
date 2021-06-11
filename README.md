@@ -12,7 +12,7 @@ polygons were plotted.
 
 # Data
 
-*  covid_data.csv is the Covid-19 data itself, a CSV created from the Oxford and Our World in Data datasets with the [data_downloader.py](https://github.com/Floreuzan/covid/blob/main/data/data_downloader.py).
+*  covid_data.csv is the Covid-19 data itself, a CSV created from the [Oxford](https://www.bsg.ox.ac.uk/research/research-projects/covid-19-government-response-tracker) and [Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data) datasets with the [data_downloader.py](https://github.com/Floreuzan/covid/blob/main/data/data_downloader.py).
 *  country_polygons.json is the GeoJSON file containing the country polygons mentioned earlier. 
 *  data_dictionary.csv is a data dictionary which tells our visualization how to present each feature. It
 contains a key column identifying the variable name as written in the CSV data file; the
@@ -43,8 +43,8 @@ slider or choosing a new attribute.
 * The first visualization, which is made up of a map, a
 bar chart, and a line chart, is created and updated with three corresponding make and
 redraw functions, one for each sub-chart.
-  * For the map, the Covid data were joined to the GeoJSON data using ISO alpha-3
-codes to avoid issues with alternative spellings of country names (e.g., “Bahamas” vs.
+  * For the map, the Covid data were joined to the GeoJSON data using [ISO alpha-3
+codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) to avoid issues with alternative spellings of country names (e.g., “Bahamas” vs.
 “The Bahamas”, “Côte d'Ivoire” vs. “Ivory Coast”). Countries’ polygons were given a
 class name of “shape-ISO” (e.g., “shape-USA”), which allowed easier selection. A
 transparent rectangle was overlaid on top of the entire map SVG to allow users to click
