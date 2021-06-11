@@ -1,0 +1,1 @@
+TO run this tool, extract the zip into a directory on your computer. Then start a local web server (e.g., via "python -m http.server") and open the URL it shows (e.g., localhost:8000). You want to view index.html. This will load the tool and underlying data. You will need to be connected to the internet.

@@ -1,0 +1,318 @@
+body {
+    font-family: sans-serif;
+}
+
+#introduction, #definitions {
+    width: 800px; 
+    max-width: 100%;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#introduction, .container {
+    padding-bottom:30px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid grey;
+}
+
+.hover-bar {
+    stroke-width: 1px;
+    stroke: white;
+    stroke-opacity: 0.5;
+    -webkit-filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .6));
+    filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .6));
+}
+
+.grid line {
+    stroke: lightgrey;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    min-width: 80px;
+    height: auto;
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #6F257F;
+    padding: 14px;
+    text-align: center;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+
+.date-slider.play-button {
+    background: #f08080;
+    padding-right: 26px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    padding: 0 12px;
+    width: 60px;
+    height: 30px;
+}
+
+.date-slider.play-button:hover {
+    background-color: #696969;
+}
+
+.date-slider.date-ticks {
+    font-size: 10px;
+}
+
+.date-slider.track,
+.date-slider.track-inset,
+.date-slider.track-overlay {
+    stroke-linecap: round;
+}
+
+.date-slider.track {
+    stroke: #000;
+    stroke-opacity: 0.3;
+    stroke-width: 10px;
+}
+
+.date-slider.track-inset {
+    stroke: #dcdcdc;
+    stroke-width: 8px;
+}
+
+.date-slider.track-overlay {
+    pointer-events: stroke;
+    stroke-width: 50px;
+    stroke: transparent;
+}
+
+.date-slider.handle {
+    fill: #fff;
+    stroke: #000;
+    stroke-opacity: 0.5;
+    stroke-width: 1.25px;
+}
+
+#map {
+    width: 960px;
+    height: 500px;
+}
+
+#map .info {
+    padding: 6px 8px;
+    font: 14px/16px Arial,
+        Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+#map path {
+    /*fill: #000;*/
+    fill-opacity: .8;
+    stroke: #aaa;
+    stroke-width: 1.5px;
+}
+
+.hover-country {
+    fill: brown;
+    fill-opacity: .7;
+}
+
+#map path.selected-country {
+    stroke: #000;
+
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate 1s ease-out;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation: pulsate 1s ease-out;
+    -ms-animation-iteration-count: infinite;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+    0%    { opacity:0.8; stroke-width: 0.5; stroke-dasharray: 2,2;}
+    50%   { opacity:1.0; stroke-width: 1; stroke-dasharray: 3,3}
+    100%  { opacity:0.8; stroke-width: 0.5; stroke-dasharray: 2,2}
+}
+
+    @-moz-keyframes pulsate {
+    0%    { opacity:0.8; stroke-width: 0.5; stroke-dasharray: 2,2;}
+    50%   { opacity:1.0; stroke-width: 1; stroke-dasharray: 3,3}
+    100%  { opacity:0.8; stroke-width: 0.5; stroke-dasharray: 2,2}
+}
+
+    @-ms-keyframes pulsate {
+    0%    { opacity:0.8; stroke-width: 0.5; stroke-dasharray: 2,2;}
+    50%   { opacity:1.0; stroke-width: 1; stroke-dasharray: 3,3}
+    100%  { opacity:0.8; stroke-width: 0.5; stroke-dasharray: 2,2}
+}
+
+    @keyframes pulsate {
+    0%    { opacity:0.8; stroke-width: 1; stroke-dasharray: 2,2;}
+    50%   { opacity:1.0; stroke-width: 2; stroke-dasharray: 3,3}
+    100%  { opacity:0.8; stroke-width: 1; stroke-dasharray: 2,2}
+}
+
+div.viz2 {
+    clear:left; 
+    margin-top: 20px
+}
+
+div.viz2 svg {
+    margin-top: 20px;
+}
+
+div.viz2-table {  /* div containing the table, for scrollability */
+    width:80%; 
+    max-width:800px;
+    overflow-x: auto;
+}
+
+.viz2 table { 
+    table-layout: fixed; 
+    margin-left: 5px;
+    border-spacing: 0px;
+}
+
+.viz2 table, 
+.viz2 th, 
+.viz2 td {
+    border: 1px solid black;
+    background-color: white;
+    z-index: 1;
+}
+
+.viz2 thead th {
+    background-color: #bbb;
+}
+
+.viz2 th, .viz2 td {
+    overflow: hidden;
+    text-align: center;
+}
+
+.viz2 tr td:first-child {
+    text-align: left;
+}
+
+.viz2 .attribute-name th {
+    text-align: center;
+}
+
+
+.viz2 .selected-row,
+.viz2 .selected-row td {
+    background-color: lightskyblue;
+}
+
+.viz2 table thead th:first-child,
+.viz2 table tbody tr td:first-child {  /* first column is sticky */
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    font-weight: bold;
+}
+
+
+
+/* custom checkbox code below adapted from https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+
+/* Customize the label (the checkbox-container) */
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 1px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 22px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* make checkbox darker when hover */
+.checkbox-container:hover input:checked ~ .checkmark {
+  background-color: #0c5b9c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} 
