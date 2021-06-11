@@ -1,4 +1,4 @@
-# Covid-19 visualization tool
+# Covid-19 Visualization Tool
 
 This visualization tool built was built using version 6 of D3.js. We used Python to download,
 wrangle, and merge our two datasets. Maps were created using [Leaflet](https://leafletjs.com/) to plot country
